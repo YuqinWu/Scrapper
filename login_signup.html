@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Scrapper</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/user.js"></script>
+
+
+  </head>
+  <body>
+  <div class="site-wrap">
+
+    <div class="site-navbar bg-white py-2">
+
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+            <input id="searchbar" type="text" class="form-control" placeholder="Search..." onkeydown='if(event.keyCode==13){search_redirect();}'>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="index.html" class="js-logo-clone">Scrapper</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li class="has-children active">
+                  <a href="index.html">Collection</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Children</a></li>
+                    <li class="has-children">
+                      <a href="#">Sub Menu</a>
+                      <ul class="dropdown">
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Children</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Catalogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login_signup.html">My Account</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="icons">
+            <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
+            <a href="watchlist.html" class="icons-btn d-inline-block"><span class="icon-heart-o"></span></a>
+            <a href="cart.html" class="icons-btn d-inline-block bag">
+              <span class="icon-shopping-bag"></span>
+            </a>
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-blocks-cover inner-page" style="background-image: url('images/background.png'); background-repeat: no-repeat; background-size: cover; background-position: center">
+      <div class="container" style="padding-top:6rem;">
+        <div class="row">
+          <div class="col-md-5 mx-auto">
+            <div id="first">
+              <div class="myform form ">
+                <div class="logo mb-3">
+                  <div class="col-md-12 text-center">
+                   <h1>Login</h1>
+                  </div>
+                    </div>
+                        <form action="" method="post" name="login">
+                                <div class="form-group">
+                                   <label for="exampleInputEmail1">Username</label>
+                                   <input type="text" name="username"  class="form-control" id="username_login" aria-describedby="emailHelp" placeholder="Enter Username">
+                                </div>
+                                <div class="form-group">
+                                   <label for="exampleInputEmail1">Password</label>
+                                   <input type="password" name="password" id="password_login"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
+                                </div>
+                                <div class="form-group">
+                                   <p class="text-center">By signing up you accept our <a href="#" style="color: #0099ff">Terms Of Use</a></p>
+                                </div>
+                                <div class="col-md-12 text-center ">
+                                    <button class=" btn btn-block mybtn btn-primary tx-tfm"onclick="login_user()" type="reset">Login</button>
+                                </div>
+                                <div class="col-md-12 ">
+                                   <div class="login-or">
+                                      <hr class="hr-or">
+                                      <span class="span-or">or</span>
+                                   </div>
+                                </div>
+                                <div class="form-group">
+                                   <p class="text-center">Don't have account? <a href="#" id="signup" style="color: #0099ff">Sign up here</a></p>
+                                </div>
+                        </form>
+              </div>
+            </div>
+            <div id="second">
+                      <div class="myform form ">
+                             <div class="logo mb-3">
+                                <div class="col-md-12 text-center">
+                                   <h1 >Signup</h1>
+                                </div>
+                             </div>
+                             <form action="#" name="registration">
+                                <div class="form-group">
+                                   <label for="exampleInputEmail1">Username</label>
+                                   <input type="text"  name="username" class="form-control" id="username_signup" aria-describedby="emailHelp" placeholder="Enter Username">
+                                </div>
+                                <div class="form-group">
+                                   <label for="exampleInputEmail1">Email</label>
+                                   <input type="email" name="email"  class="form-control" id="email_signup" aria-describedby="emailHelp" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                   <label for="exampleInputEmail1">Password</label>
+                                   <input type="password" name="password" id="password_signup"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password" pattern=".{5,}" required>
+                                </div>
+                                <div class="col-md-12 text-center mb-3">
+                                    <button class=" btn btn-block mybtn btn-primary tx-tfm" onclick="addUser()" type="reset">Get Started For Free</button>
+                                   <!--<button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Get Started For Free</button>-->
+                                </div>
+                                <div class="col-md-12 ">
+                                   <div class="form-group">
+                                      <p class="text-center"><a href="#" id="signin" style="color: #0099ff">Already have an account?</a></p>
+                                   </div>
+                                </div>
+                             </form>
+                      </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer custom-border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+
+            <div class="block-7">
+              <h3 class="footer-heading mb-4">About Us</h3>
+              <p>Our mission is to be the best platform for auction and sale, satisfying your every need.</p>
+            </div>
+
+          </div>
+          <div class="col-lg-5 ml-auto mb-5 mb-lg-0">
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="footer-heading mb-4">Quick Links</h3>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Sell online</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Shopping cart</a></li>
+                  <li><a href="#">Store builder</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Mobile commerce</a></li>
+                  <li><a href="#">Dropshipping</a></li>
+                  <li><a href="#">Website development</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Point of sale</a></li>
+                  <li><a href="#">Hardware</a></li>
+                  <li><a href="#">Software</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+
+        </div>
+    </footer>
+  </div>
+  </body>
+</html>
