@@ -12,7 +12,7 @@
 
 Run `$ssh -i ~/.ssh/Scrapper.pem ubuntu@13.59.166.200`. (Be sure to put the .pem file in this path, or change the command to your path)
 
-Run `$python3 backend.py`  `$python3 autoScript.py` `$python3 receiver.py` inside Scrapper/backend/. In browser, go to "http://13.59.166.200". (You can do a `$ps -ef |grep pythont` to check, because these files may be running in the background already)
+Run `$python3 backend.py`  `$python3 autoScript.py` `$python3 receiver.py` inside Scrapper/backend/. In browser, go to "http://13.59.166.200". (You can do a `$ps -ef |grep python` to check, because these files may be running in the background already)
 
 You can use nohup to run these script to the background. e.g. `$nohup python3 backend.py &`
 
