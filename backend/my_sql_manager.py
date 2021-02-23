@@ -8,8 +8,8 @@ class MySQLManager:
     DELETE = 3
 
     sql_hostname = '127.0.0.1'
-    sql_username = 'Scrapper'
-    sql_password = 'Scrapper@2019'
+    sql_username = 'yuqinwu'
+    sql_password = '83995160'
     sql_main_database = 'ScrapperDB'
     sql_port = 3306
     sql_ip = '1.1.1.1.1'
