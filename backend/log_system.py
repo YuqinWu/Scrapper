@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template, redirect, url_for
 from my_sql_manager import MySQLManager
 
 
-# stataus: 1=active, 2=suspend(user), 3=block(admin)
+# status: 1=active, 2=suspend(user), 3=block(admin)
 class LogSystem:
 
     # Stored Procedures in MySQL
