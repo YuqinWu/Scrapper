@@ -1,5 +1,5 @@
 var toggle = false;
-var PREFIX = {URL: "http://13.59.166.200:5000/"};
+var PREFIX = {URL: "http://3.13.43.52:5000/"};
 if(toggle){
 	PREFIX.URL = "http://localhost:5000/";
 }
