@@ -30,6 +30,7 @@ class MySQLManager:
             cursor.callproc(proc, args)
             conn.commit()
             res = cursor.fetchall()
+            print(res)
             cursor.close()
             conn.close()
             return res
