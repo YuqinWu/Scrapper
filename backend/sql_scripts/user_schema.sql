@@ -13,6 +13,7 @@ CREATE TABLE Users (
 	PRIMARY KEY (user_id)
 );
 
+#add a user record 
 DROP PROCEDURE IF EXISTS add_user;
 DELIMITER |
 CREATE PROCEDURE add_user(  
@@ -30,6 +31,7 @@ BEGIN
 END; |
 DELIMITER ;
 
+#log in user
 DROP PROCEDURE IF EXISTS login;
 DELIMITER |
 CREATE PROCEDURE login(  
@@ -41,6 +43,7 @@ BEGIN
 END; |
 DELIMITER ;
 
+# get a user record
 DROP PROCEDURE IF EXISTS get_user;
 DELIMITER |
 CREATE PROCEDURE get_user(  
@@ -50,3 +53,19 @@ BEGIN
     SELECT * FROM Users WHERE user_id=inuser_id;
 END; |
 DELIMITER ;
+
+#remove a user record 
+DROP PROCEDURE IF EXISTS remove_user;
+DELIMITER |
+CREATE PROCEDURE remove_user(  
+    IN rmuser_id INT
+)
+BEGIN
+    DELETE FROM Users WHERE user_id=rmuser_id;
+    SELECT rmuser_id;
+END; |
+DELIMITER ;
+
+
+
+

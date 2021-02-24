@@ -10,15 +10,22 @@
 
 **How to run:**
 
-Run `$ssh -i ~/.ssh/Scrapper.pem ubuntu@13.59.166.200`. (Be sure to put the .pem file in this path, or change the command to your path)
+Run `$ssh -i ~/.ssh/MYEC2.pem ubuntu@3.13.43.52`. (Be sure to put the .pem file in this path, or change the command to your path)
 
-You may need to install following modules by running `pip3 install example_module`:
+Install mongoDB if not installed yet
+
+You may need to install following modules by running `pip3 install <example_module>`:
 flask
 flask_cors
 pymysql
 pymongo
 
-Run `$python3 backend.py`  `$python3 autoScript.py` `$python3 receiver.py` inside Scrapper/backend/. In browser, go to "http://13.59.166.200". (You can do a `$ps -ef |grep python` to check, because these files may be running in the background already)
+Inside the Scrapper/backend/
+Run `$python3 backend.py` to initiate the backend server. 
+Run `$python3 autoScript.py`to initiate the listener process to monitor auction end items.
+Run `$python3 receiver.py` to initiate the email notification scheduler.
+.
+In browser, go to "http://yuqinwu.com/Scrapper/" to play around. (You can do a `$ps -ef |grep python` to check, because these files may be running in the background already)
 
 You can use nohup to run these script to the background. e.g. `$nohup python3 backend.py &`
 
@@ -65,5 +72,5 @@ Look at status column for what's not yet implemented.
 
 *  We don't allow categories to be added by users. This is because if we let users create users to create categories, soon enough categories will be overflooded with same things in different names/spellings. For this reason, only admin can add categories (to be implemented).
 
-*  We used template from online for frontend code, but only for the layout and css style, and the code is changed a lot during the development. You can see our commit history from our gitlab repo: https://gitlab.com/_scrapper/auctionsite. It may need request to see, please contact us if you can't get to see this repo! Contact yuqinwu@uchicago.edu
+*  We used template from online for frontend code, but only for the layout and css style, and the code is changed a lot during the development. You can see our commit history from our gitlab repo: https://gitlab.com/_scrapper/auctionsite. It may need request to see, please contact us if you can't get to see this repo! Contact sevenw67@gmail.com
 
