@@ -31,6 +31,7 @@ class LogSystem:
                 '',
                 'Customer']
             res = MySQLManager.call_proc(LogSystem.ADD_USER, args)
+            print(res)
             username = res[0][0]
             response = {'success': True, 'username': username}
         except:
