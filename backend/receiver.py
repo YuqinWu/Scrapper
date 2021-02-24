@@ -15,7 +15,7 @@ def sendNotification(args):
 	seller_email_res = MySQLManager.query(seller_email_query, MySQLManager.SELECT)
 	buyer_email_query = "SELECT email FROM Users WHERE user_id = " + str(user_id) + ";"
 	buyer_email_res = MySQLManager.query(buyer_email_query, MySQLManager.SELECT)
-	EmailManager.send_email(seller_email_res[0][0], item_name + " Selled Successfully", "You have selled " + item_name + " !", "User")
+	EmailManager.send_email(seller_email_res[0][0], item_name + " Sold Successfully", "You have sold " + item_name + " !", "User")
 	EmailManager.send_email(buyer_email_res[0][0], item_name + " Bought Successfully", "You have bought " + item_name + " !", "User")
 
 

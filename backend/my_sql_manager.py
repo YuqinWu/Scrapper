@@ -30,7 +30,7 @@ class MySQLManager:
             cursor.callproc(proc, args)
             conn.commit()
             res = cursor.fetchall()
-            print(res)
+            print("response from sql: ", res)
             cursor.close()
             conn.close()
             return res
@@ -56,6 +56,7 @@ class MySQLManager:
                 res = cursor.fetchall()
             elif query_type == MySQLManager.UPDATE:
                 res = cursor.rowcount
+            print("response from sql: ", res)
             cursor.close()
             conn.close()
             return res
