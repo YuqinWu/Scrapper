@@ -1,4 +1,4 @@
-¬…≥÷from flask import jsonify
+from flask import jsonify
 from my_sql_manager import MySQLManager
 
 
