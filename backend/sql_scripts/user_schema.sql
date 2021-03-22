@@ -31,6 +31,25 @@ BEGIN
 END; |
 DELIMITER ;
 
+DROP PROCEDURE IF EXISTS update_user;
+DELIMITER |
+CREATE PROCEDURE update_user(  
+    IN inuser_id  INT,
+    IN addemail VARCHAR(50),
+    IN addpassword VARCHAR(50), 
+    IN adddescription VARCHAR(250)
+)
+BEGIN
+    UPDATE Users
+    SET email = addemail, 
+        password = addpassword, 
+        description = adddescription
+    WHERE user_id = inuser_id;
+    SELECT inuser_id;
+END; |
+DELIMITER ;
+
+
 #log in user
 DROP PROCEDURE IF EXISTS login;
 DELIMITER |
@@ -47,7 +66,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS get_user;
 DELIMITER |
 CREATE PROCEDURE get_user(  
-    IN inuser_id  VARCHAR(50)
+    IN inuser_id  INT
 )
 BEGIN
     SELECT * FROM Users WHERE user_id=inuser_id;
@@ -67,5 +86,28 @@ END; |
 DELIMITER ;
 
 
+DROP PROCEDURE IF EXISTS suspend_user;
+DELIMITER |
+CREATE PROCEDURE suspend_user(  
+    IN inuser_id  INT
+)
+BEGIN
+    UPDATE Users
+    SET status = 2
+    WHERE user_id = inuser_id;
+    SELECT inuser_id;
+END; |
+DELIMITER ;
 
-
+DROP PROCEDURE IF EXISTS reactivate_user;
+DELIMITER |
+CREATE PROCEDURE reactivate_user(  
+    IN inuser_id  INT
+)
+BEGIN
+    UPDATE Users
+    SET status = 1
+    WHERE user_id = inuser_id;
+    SELECT inuser_id;
+END; |
+DELIMITER ;

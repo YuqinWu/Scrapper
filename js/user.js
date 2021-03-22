@@ -206,6 +206,7 @@ function updateUser()
 	var success = response["success"];
 	if (success) {
 	    alert('User profile updated successfully!');
+	    location.href = "user_profile.html"
     } else {
 	    alert('There was an error in updating the profile. Try again.');
     }

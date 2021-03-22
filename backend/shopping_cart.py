@@ -11,6 +11,10 @@ class ShoppingCart:
     GET = 'get_shopping_cart'
     UPDATE = 'update_shopping_cart'
 
+    Table = 'ScrapperDB.Carts'
+
+    Fields = ['user_id', 'item_id', 'quantity', 'time_stamp']
+
     # Add item to user's shopping cart
     @staticmethod
     def add(json_item):
@@ -22,7 +26,7 @@ class ShoppingCart:
             timestamp = datetime.now()
             args = [user_id, item_id, quantity, timestamp]
             res = MySQLManager.call_proc(ShoppingCart.ADD, args)
-            response = {'success': res[0][0] == 1}
+            response = {'success': res[0][0]}
         except:
             response = {'success': False}
         finally:
@@ -37,7 +41,7 @@ class ShoppingCart:
             item_id = json_item.get('item_id')
             args = [user_id, item_id]
             res = MySQLManager.call_proc(ShoppingCart.REMOVE, args)
-            response = {'success': res[0][0] == 1}
+            response = {'success': res[0][0]}
         except:
             response = {'success': False}
         finally:
@@ -72,7 +76,7 @@ class ShoppingCart:
             args = [user_id, item_id, quantity, timestamp]
             print(args)
             res = MySQLManager.call_proc(ShoppingCart.UPDATE, args)
-            response['success'] = res[0][0] == 1
+            response['success'] = res[0][0]
         except:
             response = {'success': False}
         finally:

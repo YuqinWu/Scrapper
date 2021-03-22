@@ -19,11 +19,11 @@ class MySQLManager:
         res = []
         try:
             conn = pymysql.connect(
-            host='127.0.0.1',
-            user=MySQLManager.sql_username,
-            passwd=MySQLManager.sql_password,
-            db=MySQLManager.sql_main_database,
-            port=MySQLManager.sql_port,
+                host='127.0.0.1',
+                user=MySQLManager.sql_username,
+                passwd=MySQLManager.sql_password,
+                db=MySQLManager.sql_main_database,
+                port=MySQLManager.sql_port,
             )
             cursor = conn.cursor()
             print(args)
